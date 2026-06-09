@@ -1,0 +1,914 @@
+{
+  "nodes": [
+    {
+      "id": "file::backend/crud.py",
+      "label": "crud.py",
+      "type": "file",
+      "language": "python",
+      "path": "backend/crud.py",
+      "size": 628,
+      "n_classes": 0,
+      "n_functions": 3,
+      "n_imports": 3,
+      "detail": "This file contains functions for interacting with a database, including saving entries, retrieving all entries, and counting entries by category.",
+      "layer": "data"
+    },
+    {
+      "id": "func::backend/crud.py::save_entry",
+      "label": "save_entry",
+      "type": "function",
+      "file": "backend/crud.py",
+      "lineno": 4,
+      "args": [
+        "db",
+        "text",
+        "categories"
+      ],
+      "is_async": false,
+      "docstring": "",
+      "detail": null,
+      "layer": "data"
+    },
+    {
+      "id": "func::backend/crud.py::get_entries",
+      "label": "get_entries",
+      "type": "function",
+      "file": "backend/crud.py",
+      "lineno": 16,
+      "args": [
+        "db"
+      ],
+      "is_async": false,
+      "docstring": "",
+      "detail": null,
+      "layer": "data"
+    },
+    {
+      "id": "func::backend/crud.py::get_category_counts",
+      "label": "get_category_counts",
+      "type": "function",
+      "file": "backend/crud.py",
+      "lineno": 19,
+      "args": [
+        "db"
+      ],
+      "is_async": false,
+      "docstring": "",
+      "detail": null,
+      "layer": "data"
+    },
+    {
+      "id": "file::backend/database.py",
+      "label": "database.py",
+      "type": "file",
+      "language": "python",
+      "path": "backend/database.py",
+      "size": 390,
+      "n_classes": 0,
+      "n_functions": 0,
+      "n_imports": 3,
+      "detail": "This file contains Python code for interacting with a database, serving as the data access layer of the backend system. It handles database connections, queries, and transactions, ensuring that the application can retrieve and store data efficiently and securely.",
+      "layer": "data"
+    },
+    {
+      "id": "file::backend/db.py",
+      "label": "db.py",
+      "type": "file",
+      "language": "python",
+      "path": "backend/db.py",
+      "size": 416,
+      "n_classes": 0,
+      "n_functions": 0,
+      "n_imports": 3,
+      "detail": "This file contains database-related functions for interacting with a PostgreSQL database, including connecting to the database, executing queries, and handling transactions.",
+      "layer": "data"
+    },
+    {
+      "id": "file::backend/main.py",
+      "label": "main.py",
+      "type": "file",
+      "language": "python",
+      "path": "backend/main.py",
+      "size": 2490,
+      "n_classes": 0,
+      "n_functions": 3,
+      "n_imports": 11,
+      "detail": "This file serves as the entry point for database operations in the backend of a project. It includes functions to retrieve a database connection (`get_db`), create new entries (`create_entry`), and fetch existing entries (`get_entries`).",
+      "layer": "entry"
+    },
+    {
+      "id": "func::backend/main.py::get_db",
+      "label": "get_db",
+      "type": "function",
+      "file": "backend/main.py",
+      "lineno": 62,
+      "args": [],
+      "is_async": false,
+      "docstring": "",
+      "detail": null,
+      "layer": "entry"
+    },
+    {
+      "id": "func::backend/main.py::create_entry",
+      "label": "create_entry",
+      "type": "function",
+      "file": "backend/main.py",
+      "lineno": 70,
+      "args": [
+        "entry",
+        "db"
+      ],
+      "is_async": false,
+      "docstring": "",
+      "detail": null,
+      "layer": "entry"
+    },
+    {
+      "id": "func::backend/main.py::get_entries",
+      "label": "get_entries",
+      "type": "function",
+      "file": "backend/main.py",
+      "lineno": 86,
+      "args": [
+        "db"
+      ],
+      "is_async": false,
+      "docstring": "",
+      "detail": null,
+      "layer": "entry"
+    },
+    {
+      "id": "file::backend/models.py",
+      "label": "models.py",
+      "type": "file",
+      "language": "python",
+      "path": "backend/models.py",
+      "size": 390,
+      "n_classes": 1,
+      "n_functions": 0,
+      "n_imports": 6,
+      "detail": "This file contains a `JournalEntry` class that represents an entry in a journal within the backend of the project, likely used for logging or tracking purposes.",
+      "layer": "data"
+    },
+    {
+      "id": "class::backend/models.py::JournalEntry",
+      "label": "JournalEntry",
+      "type": "class",
+      "file": "backend/models.py",
+      "lineno": 5,
+      "bases": [
+        "Base"
+      ],
+      "methods": [],
+      "docstring": "",
+      "detail": null,
+      "layer": "data"
+    },
+    {
+      "id": "file::backend/nlp_engine.py",
+      "label": "nlp_engine.py",
+      "type": "file",
+      "language": "python",
+      "path": "backend/nlp_engine.py",
+      "size": 771,
+      "n_classes": 0,
+      "n_functions": 1,
+      "n_imports": 4,
+      "detail": "The `backend/nlp_engine.py` file contains a function named `predict_categories`, which is responsible for predicting categories of text data using natural language processing techniques. This function plays a crucial role in categorizing content, enabling better organization and retrieval within the application.",
+      "layer": "other"
+    },
+    {
+      "id": "func::backend/nlp_engine.py::predict_categories",
+      "label": "predict_categories",
+      "type": "function",
+      "file": "backend/nlp_engine.py",
+      "lineno": 17,
+      "args": [
+        "text"
+      ],
+      "is_async": false,
+      "docstring": "",
+      "detail": null,
+      "layer": "other"
+    },
+    {
+      "id": "file::backend/schemas.py",
+      "label": "schemas.py",
+      "type": "file",
+      "language": "python",
+      "path": "backend/schemas.py",
+      "size": 559,
+      "n_classes": 2,
+      "n_functions": 0,
+      "n_imports": 3,
+      "detail": "This file defines data schemas for input (`EntryInput`) and output (`EntryOut`) objects used in the backend of a project, ensuring consistent data formats across different parts of the application.",
+      "layer": "other"
+    },
+    {
+      "id": "class::backend/schemas.py::EntryInput",
+      "label": "EntryInput",
+      "type": "class",
+      "file": "backend/schemas.py",
+      "lineno": 25,
+      "bases": [
+        "BaseModel"
+      ],
+      "methods": [],
+      "docstring": "",
+      "detail": null,
+      "layer": "other"
+    },
+    {
+      "id": "class::backend/schemas.py::EntryOut",
+      "label": "EntryOut",
+      "type": "class",
+      "file": "backend/schemas.py",
+      "lineno": 28,
+      "bases": [
+        "BaseModel"
+      ],
+      "methods": [],
+      "docstring": "",
+      "detail": null,
+      "layer": "other"
+    },
+    {
+      "id": "file::frontend/index.tsx",
+      "label": "index.tsx",
+      "type": "file",
+      "language": "typescript",
+      "path": "frontend/index.tsx",
+      "size": 6218,
+      "n_classes": 0,
+      "n_functions": 4,
+      "n_imports": 5,
+      "detail": "This TypeScript file serves as the entry point for the frontend of a project, containing functions to render the Home component, fetch entries from an API, handle form submissions, and format dates for display.",
+      "layer": "entry"
+    },
+    {
+      "id": "func::frontend/index.tsx::Home",
+      "label": "Home",
+      "type": "function",
+      "file": "frontend/index.tsx",
+      "lineno": 24,
+      "args": [],
+      "is_async": false,
+      "docstring": "",
+      "detail": null,
+      "layer": "entry"
+    },
+    {
+      "id": "func::frontend/index.tsx::fetchEntries",
+      "label": "fetchEntries",
+      "type": "function",
+      "file": "frontend/index.tsx",
+      "lineno": 31,
+      "args": [],
+      "is_async": true,
+      "docstring": "",
+      "detail": null,
+      "layer": "entry"
+    },
+    {
+      "id": "func::frontend/index.tsx::handleSubmit",
+      "label": "handleSubmit",
+      "type": "function",
+      "file": "frontend/index.tsx",
+      "lineno": 45,
+      "args": [],
+      "is_async": true,
+      "docstring": "",
+      "detail": null,
+      "layer": "entry"
+    },
+    {
+      "id": "func::frontend/index.tsx::formatDate",
+      "label": "formatDate",
+      "type": "function",
+      "file": "frontend/index.tsx",
+      "lineno": 65,
+      "args": [],
+      "is_async": false,
+      "docstring": "",
+      "detail": null,
+      "layer": "entry"
+    },
+    {
+      "id": "file::model/train_model.py",
+      "label": "train_model.py",
+      "type": "file",
+      "language": "python",
+      "path": "model/train_model.py",
+      "size": 1472,
+      "n_classes": 0,
+      "n_functions": 1,
+      "n_imports": 6,
+      "detail": "This file contains a function named `load_data` which is responsible for loading and preprocessing the dataset required for training models within the data layer of the project.",
+      "layer": "data"
+    },
+    {
+      "id": "func::model/train_model.py::load_data",
+      "label": "load_data",
+      "type": "function",
+      "file": "model/train_model.py",
+      "lineno": 10,
+      "args": [
+        "path"
+      ],
+      "is_async": false,
+      "docstring": "",
+      "detail": null,
+      "layer": "data"
+    },
+    {
+      "id": "dep::sqlalchemy",
+      "label": "sqlalchemy",
+      "type": "dependency",
+      "external": true,
+      "detail": null,
+      "layer": "external"
+    },
+    {
+      "id": "dep::backend",
+      "label": "backend",
+      "type": "dependency",
+      "external": true,
+      "detail": null,
+      "layer": "external"
+    },
+    {
+      "id": "dep::fastapi",
+      "label": "fastapi",
+      "type": "dependency",
+      "external": true,
+      "detail": null,
+      "layer": "external"
+    },
+    {
+      "id": "dep::datetime",
+      "label": "datetime",
+      "type": "dependency",
+      "external": true,
+      "detail": null,
+      "layer": "external"
+    },
+    {
+      "id": "dep::database",
+      "label": "database",
+      "type": "dependency",
+      "external": true,
+      "detail": null,
+      "layer": "external"
+    },
+    {
+      "id": "dep::torch",
+      "label": "torch",
+      "type": "dependency",
+      "external": true,
+      "detail": null,
+      "layer": "external"
+    },
+    {
+      "id": "dep::json",
+      "label": "json",
+      "type": "dependency",
+      "external": true,
+      "detail": null,
+      "layer": "external"
+    },
+    {
+      "id": "dep::transformers",
+      "label": "transformers",
+      "type": "dependency",
+      "external": true,
+      "detail": null,
+      "layer": "external"
+    },
+    {
+      "id": "dep::pydantic",
+      "label": "pydantic",
+      "type": "dependency",
+      "external": true,
+      "detail": null,
+      "layer": "external"
+    },
+    {
+      "id": "dep::typing",
+      "label": "typing",
+      "type": "dependency",
+      "external": true,
+      "detail": null,
+      "layer": "external"
+    },
+    {
+      "id": "dep::react",
+      "label": "react",
+      "type": "dependency",
+      "external": true,
+      "detail": null,
+      "layer": "external"
+    },
+    {
+      "id": "dep::recharts",
+      "label": "recharts",
+      "type": "dependency",
+      "external": true,
+      "detail": null,
+      "layer": "external"
+    },
+    {
+      "id": "dep::react-calendar",
+      "label": "react-calendar",
+      "type": "dependency",
+      "external": true,
+      "detail": null,
+      "layer": "external"
+    },
+    {
+      "id": "dep::sklearn",
+      "label": "sklearn",
+      "type": "dependency",
+      "external": true,
+      "detail": null,
+      "layer": "external"
+    },
+    {
+      "id": "dep::joblib",
+      "label": "joblib",
+      "type": "dependency",
+      "external": true,
+      "detail": null,
+      "layer": "external"
+    },
+    {
+      "id": "dep::os",
+      "label": "os",
+      "type": "dependency",
+      "external": true,
+      "detail": null,
+      "layer": "external"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file::backend/crud.py",
+      "target": "func::backend/crud.py::save_entry",
+      "type": "contains"
+    },
+    {
+      "source": "file::backend/crud.py",
+      "target": "func::backend/crud.py::get_entries",
+      "type": "contains"
+    },
+    {
+      "source": "file::backend/crud.py",
+      "target": "func::backend/crud.py::get_category_counts",
+      "type": "contains"
+    },
+    {
+      "source": "file::backend/main.py",
+      "target": "func::backend/main.py::get_db",
+      "type": "contains"
+    },
+    {
+      "source": "file::backend/main.py",
+      "target": "func::backend/main.py::create_entry",
+      "type": "contains"
+    },
+    {
+      "source": "file::backend/main.py",
+      "target": "func::backend/main.py::get_entries",
+      "type": "contains"
+    },
+    {
+      "source": "file::backend/models.py",
+      "target": "class::backend/models.py::JournalEntry",
+      "type": "contains"
+    },
+    {
+      "source": "file::backend/nlp_engine.py",
+      "target": "func::backend/nlp_engine.py::predict_categories",
+      "type": "contains"
+    },
+    {
+      "source": "file::backend/schemas.py",
+      "target": "class::backend/schemas.py::EntryInput",
+      "type": "contains"
+    },
+    {
+      "source": "file::backend/schemas.py",
+      "target": "class::backend/schemas.py::EntryOut",
+      "type": "contains"
+    },
+    {
+      "source": "file::frontend/index.tsx",
+      "target": "func::frontend/index.tsx::Home",
+      "type": "contains"
+    },
+    {
+      "source": "file::frontend/index.tsx",
+      "target": "func::frontend/index.tsx::fetchEntries",
+      "type": "contains"
+    },
+    {
+      "source": "file::frontend/index.tsx",
+      "target": "func::frontend/index.tsx::handleSubmit",
+      "type": "contains"
+    },
+    {
+      "source": "file::frontend/index.tsx",
+      "target": "func::frontend/index.tsx::formatDate",
+      "type": "contains"
+    },
+    {
+      "source": "file::model/train_model.py",
+      "target": "func::model/train_model.py::load_data",
+      "type": "contains"
+    },
+    {
+      "source": "file::backend/crud.py",
+      "target": "dep::sqlalchemy",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::backend/crud.py",
+      "target": "dep::backend",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::backend/crud.py",
+      "target": "dep::sqlalchemy",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::backend/database.py",
+      "target": "dep::sqlalchemy",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::backend/database.py",
+      "target": "dep::sqlalchemy",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::backend/database.py",
+      "target": "dep::sqlalchemy",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::backend/db.py",
+      "target": "dep::sqlalchemy",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::backend/db.py",
+      "target": "dep::sqlalchemy",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::backend/db.py",
+      "target": "dep::sqlalchemy",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::backend/main.py",
+      "target": "dep::fastapi",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::backend/main.py",
+      "target": "dep::fastapi",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::backend/main.py",
+      "target": "dep::sqlalchemy",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::backend/main.py",
+      "target": "file::backend/schemas.py",
+      "type": "imports"
+    },
+    {
+      "source": "file::backend/main.py",
+      "target": "file::backend/schemas.py",
+      "type": "imports"
+    },
+    {
+      "source": "file::backend/main.py",
+      "target": "file::backend/models.py",
+      "type": "imports"
+    },
+    {
+      "source": "file::backend/main.py",
+      "target": "file::backend/database.py",
+      "type": "imports"
+    },
+    {
+      "source": "file::backend/main.py",
+      "target": "file::backend/database.py",
+      "type": "imports"
+    },
+    {
+      "source": "file::backend/main.py",
+      "target": "file::backend/database.py",
+      "type": "imports"
+    },
+    {
+      "source": "file::backend/main.py",
+      "target": "file::backend/nlp_engine.py",
+      "type": "imports"
+    },
+    {
+      "source": "file::backend/main.py",
+      "target": "dep::fastapi",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::backend/models.py",
+      "target": "dep::sqlalchemy",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::backend/models.py",
+      "target": "dep::sqlalchemy",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::backend/models.py",
+      "target": "dep::sqlalchemy",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::backend/models.py",
+      "target": "dep::sqlalchemy",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::backend/models.py",
+      "target": "dep::datetime",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::backend/models.py",
+      "target": "dep::database",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::backend/nlp_engine.py",
+      "target": "dep::torch",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::backend/nlp_engine.py",
+      "target": "dep::json",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::backend/nlp_engine.py",
+      "target": "dep::transformers",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::backend/nlp_engine.py",
+      "target": "dep::transformers",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::backend/schemas.py",
+      "target": "dep::pydantic",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::backend/schemas.py",
+      "target": "dep::datetime",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::backend/schemas.py",
+      "target": "dep::typing",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::frontend/index.tsx",
+      "target": "dep::react",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::frontend/index.tsx",
+      "target": "dep::recharts",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::frontend/index.tsx",
+      "target": "dep::react-calendar",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::frontend/index.tsx",
+      "target": "dep::react-calendar",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::model/train_model.py",
+      "target": "dep::sklearn",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::model/train_model.py",
+      "target": "dep::sklearn",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::model/train_model.py",
+      "target": "dep::sklearn",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::model/train_model.py",
+      "target": "dep::sklearn",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::model/train_model.py",
+      "target": "dep::joblib",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::model/train_model.py",
+      "target": "dep::os",
+      "type": "depends_on"
+    }
+  ],
+  "stats": {
+    "n_files": 9,
+    "n_classes": 3,
+    "n_functions": 12,
+    "n_deps": 16,
+    "n_edges": 58,
+    "layers": {
+      "data": 10,
+      "entry": 9,
+      "other": 5,
+      "external": 16
+    }
+  },
+  "flowchart": {
+    "nodes": [
+      {
+        "id": "flow::frontend/index.tsx",
+        "label": "index.tsx",
+        "path": "frontend/index.tsx",
+        "lane": "entry",
+        "is_entry": true
+      },
+      {
+        "id": "flow::backend/main.py",
+        "label": "main.py",
+        "path": "backend/main.py",
+        "lane": "entry",
+        "is_entry": true
+      },
+      {
+        "id": "flow::backend/models.py",
+        "label": "models.py",
+        "path": "backend/models.py",
+        "lane": "data",
+        "is_entry": false
+      },
+      {
+        "id": "flow::backend/database.py",
+        "label": "database.py",
+        "path": "backend/database.py",
+        "lane": "data",
+        "is_entry": false
+      },
+      {
+        "id": "flow::backend/schemas.py",
+        "label": "schemas.py",
+        "path": "backend/schemas.py",
+        "lane": "other",
+        "is_entry": false
+      },
+      {
+        "id": "flow::backend/nlp_engine.py",
+        "label": "nlp_engine.py",
+        "path": "backend/nlp_engine.py",
+        "lane": "other",
+        "is_entry": false
+      }
+    ],
+    "edges": [
+      {
+        "source": "flow::backend/main.py",
+        "target": "flow::backend/nlp_engine.py",
+        "label": "predict_categories"
+      },
+      {
+        "source": "flow::backend/main.py",
+        "target": "flow::backend/models.py",
+        "label": "JournalEntry"
+      },
+      {
+        "source": "flow::backend/main.py",
+        "target": "flow::backend/schemas.py",
+        "label": "imports"
+      },
+      {
+        "source": "flow::backend/main.py",
+        "target": "flow::backend/database.py",
+        "label": "imports"
+      },
+      {
+        "source": "flow::backend/models.py",
+        "target": "flow::backend/database.py",
+        "label": "imports"
+      }
+    ],
+    "lanes": [
+      "entry",
+      "api",
+      "business",
+      "data",
+      "ui",
+      "util",
+      "config",
+      "test",
+      "other"
+    ],
+    "entries": [
+      "backend/main.py",
+      "frontend/index.tsx"
+    ],
+    "mermaid": "flowchart LR\n    n0([\"index.tsx<br/>entry\"])\n    n1([\"main.py<br/>entry\"])\n    n2[\"models.py<br/>data\"]\n    n3[\"database.py<br/>data\"]\n    n4[\"schemas.py<br/>other\"]\n    n5[\"nlp_engine.py<br/>other\"]\n    n1 -->|predict_categories| n5\n    n1 -->|JournalEntry| n2\n    n1 -->|imports| n4\n    n1 -->|imports| n3\n    n2 -->|imports| n3",
+    "narrative": "The project starts with the frontend entry point at `frontend/index.tsx`, which is a React application. It communicates with the backend through API calls. The main execution begins in `backend/main.py`, where it initializes the server and handles incoming requests.\n\nData flows from the frontend to the backend, where it's processed by the NLP engine in `backend/nlp_engine.py` to predict categories. This data is then stored in the database using models defined in `backend/models.py`. The connection between these layers is managed through schemas defined in `backend/schemas.py` and database interactions handled in `backend/database.py`.\n\nOverall, the project consists of three main components: frontend for user interaction, backend for processing logic and data handling, and external dependencies that provide additional functionality."
+  },
+  "tour": {
+    "intro": "Welcome on this guided tour of our codebase! You're about to explore a compact yet well-organized system with just 9 files, 3 classes, and 12 functions. We'll dive into three layers\u2014data, entry, and other\u2014and make 6 stops along the way. Let's get started!",
+    "steps": [
+      {
+        "step": 1,
+        "node_id": "file::frontend/index.tsx",
+        "node_label": "index.tsx",
+        "node_type": "file",
+        "layer": "entry",
+        "path": "frontend/index.tsx",
+        "narration": "This file is the entry point for our frontend application, containing the `Home` component which serves as the main interface for users. It also includes utility functions like `fetchEntries` to retrieve data from the backend, `handleSubmit` to handle form submissions, and `formatDate` to format dates consistently across the app. As we move on to the next stop in our tour, we'll delve into `main.py`, which acts as the entry point for our backend server, setting up routes and handling requests."
+      },
+      {
+        "step": 2,
+        "node_id": "file::backend/main.py",
+        "node_label": "main.py",
+        "node_type": "file",
+        "layer": "entry",
+        "path": "backend/main.py",
+        "narration": "In `backend/main.py`, we see functions that serve as the core entry points for our application. The `get_db` function initializes and returns a connection to our database, ensuring that all data operations are performed through this single point of access. The `create_entry` function allows us to add new entries to our database, while `get_entries` retrieves existing ones. These functions form the backbone of our data handling, providing a clean interface for interacting with our database.\n\nAs we move on to the next stop, `crud.py`, we'll dive deeper into how these basic operations are implemented. This file will reveal the actual logic behind creating and retrieving entries, showing us how our application manages its data at a more granular level."
+      },
+      {
+        "step": 3,
+        "node_id": "file::backend/crud.py",
+        "node_label": "crud.py",
+        "node_type": "file",
+        "layer": "data",
+        "path": "backend/crud.py",
+        "narration": "We've arrived at `crud.py`, which serves as the data layer of our application. This file contains essential functions for interacting with our database, including saving entries, retrieving all entries, and counting entries by category. These functions are crucial for managing the persistence layer, ensuring that data integrity is maintained across different parts of the application.\n\nAs we move forward to `train_model.py`, we'll see how these data operations are leveraged to train machine learning models on our dataset. This transition bridges the gap between data management and model training, highlighting the seamless integration required for a complete data-driven workflow."
+      },
+      {
+        "step": 4,
+        "node_id": "file::model/train_model.py",
+        "node_label": "train_model.py",
+        "node_type": "file",
+        "layer": "data",
+        "path": "model/train_model.py",
+        "narration": "This `train_model.py` file is where the magic happens! It contains the function `load_data`, which is crucial for feeding our machine learning model with the necessary data. Think of it as the bridge between raw data and trained models. As we move on to `schemas.py`, you'll see how these data structures are validated and formatted to ensure consistency throughout our application. Stay tuned!"
+      },
+      {
+        "step": 5,
+        "node_id": "file::backend/schemas.py",
+        "node_label": "schemas.py",
+        "node_type": "file",
+        "layer": "other",
+        "path": "backend/schemas.py",
+        "narration": "This file contains schemas for data validation and serialization using Pydantic models. `EntryInput` is used to validate incoming data for creating new entries, while `EntryOut` defines how these entries are serialized before being returned to the client. These schemas ensure that the data processed by the NLP engine in `nlp_engine.py` adheres to a consistent and expected format, enhancing both data integrity and API usability."
+      },
+      {
+        "step": 6,
+        "node_id": "file::backend/nlp_engine.py",
+        "node_label": "nlp_engine.py",
+        "node_type": "file",
+        "layer": "other",
+        "path": "backend/nlp_engine.py",
+        "narration": "We've arrived at `nlp_engine.py`, where the magic happens! This file contains the `predict_categories` function, which is our final piece of the puzzle in this guided tour. It takes the processed text from previous layers and uses it to predict categories or labels for the input data. This function acts as the heart of our NLP system, integrating all the pieces we've seen so far\u2014like preprocessing, feature extraction, and model inference\u2014to deliver meaningful insights. As we step out of this stop, we'll see how these predictions are used in real-world applications to make decisions or recommendations based on text data. Stay tuned for the final destination!"
+      }
+    ],
+    "outro": "We've explored the key components of our project, touching on the frontend with `index.tsx`, backend logic in `main.py` and `crud.py`, model training in `train_model.py`, data validation with `schemas.py`, and natural language processing with `nlp_engine.py`. Now, click around the graph to see how these pieces interact!",
+    "total_steps": 6
+  },
+  "meta": {
+    "source": "https://github.com/AksharaSiddharthan/Chronicle",
+    "owner": "AksharaSiddharthan",
+    "repo": "Chronicle",
+    "local_path": "C:\\Users\\aksha\\AppData\\Local\\Temp\\codegraph_repos\\AksharaSiddharthan__Chronicle"
+  }
+}

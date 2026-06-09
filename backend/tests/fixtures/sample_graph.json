@@ -1,0 +1,1525 @@
+{
+  "nodes": [
+    {
+      "id": "file::main.py",
+      "label": "main.py",
+      "type": "file",
+      "language": "python",
+      "path": "main.py",
+      "size": 5437,
+      "n_classes": 2,
+      "n_functions": 8,
+      "n_imports": 18,
+      "detail": null,
+      "layer": "entry"
+    },
+    {
+      "id": "class::main.py::AnalyzeRequest",
+      "label": "AnalyzeRequest",
+      "type": "class",
+      "file": "main.py",
+      "lineno": 33,
+      "bases": [
+        "BaseModel"
+      ],
+      "methods": [],
+      "docstring": "",
+      "detail": null,
+      "layer": "entry"
+    },
+    {
+      "id": "class::main.py::NodeDetailRequest",
+      "label": "NodeDetailRequest",
+      "type": "class",
+      "file": "main.py",
+      "lineno": 38,
+      "bases": [
+        "BaseModel"
+      ],
+      "methods": [],
+      "docstring": "",
+      "detail": null,
+      "layer": "entry"
+    },
+    {
+      "id": "func::main.py::root",
+      "label": "root",
+      "type": "function",
+      "file": "main.py",
+      "lineno": 44,
+      "args": [],
+      "is_async": true,
+      "docstring": "",
+      "detail": null,
+      "layer": "entry"
+    },
+    {
+      "id": "func::main.py::health",
+      "label": "health",
+      "type": "function",
+      "file": "main.py",
+      "lineno": 49,
+      "args": [],
+      "is_async": true,
+      "docstring": "",
+      "detail": null,
+      "layer": "entry"
+    },
+    {
+      "id": "func::main.py::analyze",
+      "label": "analyze",
+      "type": "function",
+      "file": "main.py",
+      "lineno": 66,
+      "args": [
+        "req"
+      ],
+      "is_async": true,
+      "docstring": "",
+      "detail": null,
+      "layer": "entry"
+    },
+    {
+      "id": "func::main.py::status",
+      "label": "status",
+      "type": "function",
+      "file": "main.py",
+      "lineno": 80,
+      "args": [
+        "job_id"
+      ],
+      "is_async": true,
+      "docstring": "",
+      "detail": null,
+      "layer": "entry"
+    },
+    {
+      "id": "func::main.py::graph",
+      "label": "graph",
+      "type": "function",
+      "file": "main.py",
+      "lineno": 88,
+      "args": [
+        "job_id"
+      ],
+      "is_async": true,
+      "docstring": "",
+      "detail": null,
+      "layer": "entry"
+    },
+    {
+      "id": "func::main.py::node_detail",
+      "label": "node_detail",
+      "type": "function",
+      "file": "main.py",
+      "lineno": 98,
+      "args": [
+        "req"
+      ],
+      "is_async": true,
+      "docstring": "",
+      "detail": null,
+      "layer": "entry"
+    },
+    {
+      "id": "func::main.py::get_tour",
+      "label": "get_tour",
+      "type": "function",
+      "file": "main.py",
+      "lineno": 119,
+      "args": [
+        "job_id"
+      ],
+      "is_async": true,
+      "docstring": "Return the guided tour for a completed job.",
+      "detail": null,
+      "layer": "entry"
+    },
+    {
+      "id": "func::main.py::_run_pipeline",
+      "label": "_run_pipeline",
+      "type": "function",
+      "file": "main.py",
+      "lineno": 129,
+      "args": [
+        "job_id",
+        "source",
+        "source_type"
+      ],
+      "is_async": true,
+      "docstring": "",
+      "detail": null,
+      "layer": "entry"
+    },
+    {
+      "id": "file::save_fixture.py",
+      "label": "save_fixture.py",
+      "type": "file",
+      "language": "python",
+      "path": "save_fixture.py",
+      "size": 690,
+      "n_classes": 0,
+      "n_functions": 1,
+      "n_imports": 6,
+      "detail": null,
+      "layer": "other"
+    },
+    {
+      "id": "func::save_fixture.py::main",
+      "label": "main",
+      "type": "function",
+      "file": "save_fixture.py",
+      "lineno": 7,
+      "args": [],
+      "is_async": true,
+      "docstring": "",
+      "detail": null,
+      "layer": "other"
+    },
+    {
+      "id": "file::test_graph_properties.py",
+      "label": "test_graph_properties.py",
+      "type": "file",
+      "language": "python",
+      "path": "test_graph_properties.py",
+      "size": 11661,
+      "n_classes": 0,
+      "n_functions": 19,
+      "n_imports": 17,
+      "detail": null,
+      "layer": "test"
+    },
+    {
+      "id": "func::test_graph_properties.py::sample_graph",
+      "label": "sample_graph",
+      "type": "function",
+      "file": "test_graph_properties.py",
+      "lineno": 24,
+      "args": [],
+      "is_async": false,
+      "docstring": "Returns a real graph dict as produced by DependencyAgent + LayerAgent + TourAgent.\nReplace the body with however you get a graph in your tests \u2014\neither call the pipeline directly or load a saved JSON snapshot.\n\nOption A (saved snapshot \u2014 fast, no LLM needed):\n    import json\n    with open(\"tests/fixtures/sample_graph.json\") as f:\n        return json.load(f)\n\nOption B (call pipeline directly):\n    import asyncio\n    from agents.dependency_agent import DependencyAgent\n    from agents.layer_agent import LayerAgent\n    from agents.parser_agent import ParserAgent\n    parsed = asyncio.run(ParserAgent().run(\"tests/fixtures/tiny_repo\"))\n    graph  = asyncio.run(DependencyAgent().run(parsed))\n    graph  = asyncio.run(LayerAgent().run(graph, parsed))\n    return graph",
+      "detail": null,
+      "layer": "test"
+    },
+    {
+      "id": "func::test_graph_properties.py::node_ids",
+      "label": "node_ids",
+      "type": "function",
+      "file": "test_graph_properties.py",
+      "lineno": 52,
+      "args": [
+        "sample_graph"
+      ],
+      "is_async": false,
+      "docstring": "",
+      "detail": null,
+      "layer": "test"
+    },
+    {
+      "id": "func::test_graph_properties.py::test_every_edge_references_existing_nodes",
+      "label": "test_every_edge_references_existing_nodes",
+      "type": "function",
+      "file": "test_graph_properties.py",
+      "lineno": 61,
+      "args": [
+        "sample_graph",
+        "node_ids"
+      ],
+      "is_async": false,
+      "docstring": "No dangling edge \u2014 both endpoints must be real nodes.",
+      "detail": null,
+      "layer": "test"
+    },
+    {
+      "id": "func::test_graph_properties.py::test_node_ids_are_unique",
+      "label": "test_node_ids_are_unique",
+      "type": "function",
+      "file": "test_graph_properties.py",
+      "lineno": 70,
+      "args": [
+        "sample_graph"
+      ],
+      "is_async": false,
+      "docstring": "Node IDs must be globally unique.",
+      "detail": null,
+      "layer": "test"
+    },
+    {
+      "id": "func::test_graph_properties.py::test_no_self_loops_on_dependency_edges",
+      "label": "test_no_self_loops_on_dependency_edges",
+      "type": "function",
+      "file": "test_graph_properties.py",
+      "lineno": 77,
+      "args": [
+        "sample_graph"
+      ],
+      "is_async": false,
+      "docstring": "A file/class/function must not import or depend on itself.",
+      "detail": null,
+      "layer": "test"
+    },
+    {
+      "id": "func::test_graph_properties.py::test_every_node_has_an_id_label_and_type",
+      "label": "test_every_node_has_an_id_label_and_type",
+      "type": "function",
+      "file": "test_graph_properties.py",
+      "lineno": 87,
+      "args": [
+        "sample_graph"
+      ],
+      "is_async": false,
+      "docstring": "Core fields must be present and non-empty on every node.",
+      "detail": null,
+      "layer": "test"
+    },
+    {
+      "id": "func::test_graph_properties.py::test_node_types_are_known_values",
+      "label": "test_node_types_are_known_values",
+      "type": "function",
+      "file": "test_graph_properties.py",
+      "lineno": 96,
+      "args": [
+        "sample_graph"
+      ],
+      "is_async": false,
+      "docstring": "type field must be one of the four known values DependencyAgent produces.",
+      "detail": null,
+      "layer": "test"
+    },
+    {
+      "id": "func::test_graph_properties.py::test_every_file_node_has_path",
+      "label": "test_every_file_node_has_path",
+      "type": "function",
+      "file": "test_graph_properties.py",
+      "lineno": 103,
+      "args": [
+        "sample_graph"
+      ],
+      "is_async": false,
+      "docstring": "File nodes produced by DependencyAgent always have a path field.",
+      "detail": null,
+      "layer": "test"
+    },
+    {
+      "id": "func::test_graph_properties.py::test_every_class_and_function_node_has_file_reference",
+      "label": "test_every_class_and_function_node_has_file_reference",
+      "type": "function",
+      "file": "test_graph_properties.py",
+      "lineno": 109,
+      "args": [
+        "sample_graph"
+      ],
+      "is_async": false,
+      "docstring": "Class and function nodes must know which file they belong to.",
+      "detail": null,
+      "layer": "test"
+    },
+    {
+      "id": "func::test_graph_properties.py::test_layer_values_are_valid",
+      "label": "test_layer_values_are_valid",
+      "type": "function",
+      "file": "test_graph_properties.py",
+      "lineno": 118,
+      "args": [
+        "sample_graph"
+      ],
+      "is_async": false,
+      "docstring": "LayerAgent must assign only known layer strings.",
+      "detail": null,
+      "layer": "test"
+    },
+    {
+      "id": "func::test_graph_properties.py::test_stats_match_actual_node_counts",
+      "label": "test_stats_match_actual_node_counts",
+      "type": "function",
+      "file": "test_graph_properties.py",
+      "lineno": 128,
+      "args": [
+        "sample_graph"
+      ],
+      "is_async": false,
+      "docstring": "The stats dict must match the actual node list \u2014 not stale numbers.",
+      "detail": null,
+      "layer": "test"
+    },
+    {
+      "id": "func::test_graph_properties.py::test_tour_steps_reference_existing_nodes",
+      "label": "test_tour_steps_reference_existing_nodes",
+      "type": "function",
+      "file": "test_graph_properties.py",
+      "lineno": 139,
+      "args": [
+        "sample_graph",
+        "node_ids"
+      ],
+      "is_async": false,
+      "docstring": "Every tour step must point to a node that actually exists.",
+      "detail": null,
+      "layer": "test"
+    },
+    {
+      "id": "func::test_graph_properties.py::test_tour_steps_are_ordered_by_step_number",
+      "label": "test_tour_steps_are_ordered_by_step_number",
+      "type": "function",
+      "file": "test_graph_properties.py",
+      "lineno": 149,
+      "args": [
+        "sample_graph"
+      ],
+      "is_async": false,
+      "docstring": "Tour steps must come out in ascending step order.",
+      "detail": null,
+      "layer": "test"
+    },
+    {
+      "id": "func::test_graph_properties.py::test_contains_edges_point_from_file_to_child",
+      "label": "test_contains_edges_point_from_file_to_child",
+      "type": "function",
+      "file": "test_graph_properties.py",
+      "lineno": 156,
+      "args": [
+        "sample_graph"
+      ],
+      "is_async": false,
+      "docstring": "'contains' edges must go file \u2192 class or file \u2192 function, never backwards.",
+      "detail": null,
+      "layer": "test"
+    },
+    {
+      "id": "func::test_graph_properties.py::well_formed_graph",
+      "label": "well_formed_graph",
+      "type": "function",
+      "file": "test_graph_properties.py",
+      "lineno": 182,
+      "args": [
+        "draw"
+      ],
+      "is_async": false,
+      "docstring": "Generates random but structurally valid graphs matching your schema.",
+      "detail": null,
+      "layer": "test"
+    },
+    {
+      "id": "func::test_graph_properties.py::test_hypothesis_no_dangling_edges_in_generated_graphs",
+      "label": "test_hypothesis_no_dangling_edges_in_generated_graphs",
+      "type": "function",
+      "file": "test_graph_properties.py",
+      "lineno": 225,
+      "args": [
+        "g"
+      ],
+      "is_async": false,
+      "docstring": "Hypothesis: well-formed graphs should never have dangling edges.",
+      "detail": null,
+      "layer": "test"
+    },
+    {
+      "id": "func::test_graph_properties.py::test_hypothesis_stats_always_consistent",
+      "label": "test_hypothesis_stats_always_consistent",
+      "type": "function",
+      "file": "test_graph_properties.py",
+      "lineno": 235,
+      "args": [
+        "g"
+      ],
+      "is_async": false,
+      "docstring": "Hypothesis: stats dict must always match actual node counts.",
+      "detail": null,
+      "layer": "test"
+    },
+    {
+      "id": "func::test_graph_properties.py::test_pipeline_is_idempotent",
+      "label": "test_pipeline_is_idempotent",
+      "type": "function",
+      "file": "test_graph_properties.py",
+      "lineno": 248,
+      "args": [
+        "tmp_path"
+      ],
+      "is_async": false,
+      "docstring": "Same repo \u2192 structurally identical graph on two separate runs.\nCatches non-determinism in agent output.\n\nFill in the path to a small fixture repo before running.",
+      "detail": null,
+      "layer": "test"
+    },
+    {
+      "id": "func::test_graph_properties.py::test_adding_isolated_file_adds_exactly_one_node",
+      "label": "test_adding_isolated_file_adds_exactly_one_node",
+      "type": "function",
+      "file": "test_graph_properties.py",
+      "lineno": 279,
+      "args": [
+        "tmp_path"
+      ],
+      "is_async": false,
+      "docstring": "Adding a file that imports nothing and is imported by nothing\nshould add exactly one new node and zero new edges.",
+      "detail": null,
+      "layer": "test"
+    },
+    {
+      "id": "file::test_pipeline.py",
+      "label": "test_pipeline.py",
+      "type": "file",
+      "language": "python",
+      "path": "test_pipeline.py",
+      "size": 2509,
+      "n_classes": 0,
+      "n_functions": 1,
+      "n_imports": 12,
+      "detail": null,
+      "layer": "test"
+    },
+    {
+      "id": "func::test_pipeline.py::main",
+      "label": "main",
+      "type": "function",
+      "file": "test_pipeline.py",
+      "lineno": 18,
+      "args": [],
+      "is_async": true,
+      "docstring": "",
+      "detail": null,
+      "layer": "test"
+    },
+    {
+      "id": "file::agents/dependency_agent.py",
+      "label": "dependency_agent.py",
+      "type": "file",
+      "language": "python",
+      "path": "agents/dependency_agent.py",
+      "size": 5555,
+      "n_classes": 1,
+      "n_functions": 0,
+      "n_imports": 2,
+      "detail": null,
+      "layer": "other"
+    },
+    {
+      "id": "class::agents/dependency_agent.py::DependencyAgent",
+      "label": "DependencyAgent",
+      "type": "class",
+      "file": "agents/dependency_agent.py",
+      "lineno": 6,
+      "bases": [],
+      "methods": [
+        "run",
+        "_internal_modules",
+        "_resolve_internal"
+      ],
+      "docstring": "",
+      "detail": null,
+      "layer": "other"
+    },
+    {
+      "id": "file::agents/documentation_agent.py",
+      "label": "documentation_agent.py",
+      "type": "file",
+      "language": "python",
+      "path": "agents/documentation_agent.py",
+      "size": 5182,
+      "n_classes": 1,
+      "n_functions": 0,
+      "n_imports": 3,
+      "detail": null,
+      "layer": "other"
+    },
+    {
+      "id": "class::agents/documentation_agent.py::DocumentationAgent",
+      "label": "DocumentationAgent",
+      "type": "class",
+      "file": "agents/documentation_agent.py",
+      "lineno": 17,
+      "bases": [],
+      "methods": [
+        "run",
+        "explain_node",
+        "_build_prompt",
+        "_file_prompt",
+        "_class_prompt",
+        "_function_prompt",
+        "_dep_prompt",
+        "_call_ollama"
+      ],
+      "docstring": "",
+      "detail": null,
+      "layer": "other"
+    },
+    {
+      "id": "file::agents/flowchart_agent.py",
+      "label": "flowchart_agent.py",
+      "type": "file",
+      "language": "python",
+      "path": "agents/flowchart_agent.py",
+      "size": 10389,
+      "n_classes": 1,
+      "n_functions": 0,
+      "n_imports": 4,
+      "detail": null,
+      "layer": "other"
+    },
+    {
+      "id": "class::agents/flowchart_agent.py::FlowchartAgent",
+      "label": "FlowchartAgent",
+      "type": "class",
+      "file": "agents/flowchart_agent.py",
+      "lineno": 18,
+      "bases": [],
+      "methods": [
+        "run",
+        "_extract_call_edges",
+        "_to_mermaid",
+        "_narrate"
+      ],
+      "docstring": "",
+      "detail": null,
+      "layer": "other"
+    },
+    {
+      "id": "file::agents/ingestion_agent.py",
+      "label": "ingestion_agent.py",
+      "type": "file",
+      "language": "python",
+      "path": "agents/ingestion_agent.py",
+      "size": 3381,
+      "n_classes": 1,
+      "n_functions": 2,
+      "n_imports": 7,
+      "detail": null,
+      "layer": "other"
+    },
+    {
+      "id": "class::agents/ingestion_agent.py::IngestionAgent",
+      "label": "IngestionAgent",
+      "type": "class",
+      "file": "agents/ingestion_agent.py",
+      "lineno": 47,
+      "bases": [],
+      "methods": [
+        "__init__",
+        "run",
+        "_clone_github",
+        "_load_local"
+      ],
+      "docstring": "",
+      "detail": null,
+      "layer": "other"
+    },
+    {
+      "id": "func::agents/ingestion_agent.py::_force_remove_readonly",
+      "label": "_force_remove_readonly",
+      "type": "function",
+      "file": "agents/ingestion_agent.py",
+      "lineno": 10,
+      "args": [
+        "func",
+        "path",
+        "exc_info"
+      ],
+      "is_async": false,
+      "docstring": "rmtree onerror callback \u2014 chmod +w then retry. Needed on Windows\nwhere Git marks pack-*.idx files read-only.",
+      "detail": null,
+      "layer": "other"
+    },
+    {
+      "id": "func::agents/ingestion_agent.py::_safe_rmtree",
+      "label": "_safe_rmtree",
+      "type": "function",
+      "file": "agents/ingestion_agent.py",
+      "lineno": 20,
+      "args": [
+        "target"
+      ],
+      "is_async": false,
+      "docstring": "Cross-platform recursive delete that handles Git's read-only files.",
+      "detail": null,
+      "layer": "other"
+    },
+    {
+      "id": "file::agents/layer_agent.py",
+      "label": "layer_agent.py",
+      "type": "file",
+      "language": "python",
+      "path": "agents/layer_agent.py",
+      "size": 3499,
+      "n_classes": 1,
+      "n_functions": 0,
+      "n_imports": 2,
+      "detail": null,
+      "layer": "other"
+    },
+    {
+      "id": "class::agents/layer_agent.py::LayerAgent",
+      "label": "LayerAgent",
+      "type": "class",
+      "file": "agents/layer_agent.py",
+      "lineno": 38,
+      "bases": [],
+      "methods": [
+        "run",
+        "_classify_file"
+      ],
+      "docstring": "",
+      "detail": null,
+      "layer": "other"
+    },
+    {
+      "id": "file::agents/parser_agent.py",
+      "label": "parser_agent.py",
+      "type": "file",
+      "language": "python",
+      "path": "agents/parser_agent.py",
+      "size": 6024,
+      "n_classes": 1,
+      "n_functions": 0,
+      "n_imports": 3,
+      "detail": null,
+      "layer": "other"
+    },
+    {
+      "id": "class::agents/parser_agent.py::ParserAgent",
+      "label": "ParserAgent",
+      "type": "class",
+      "file": "agents/parser_agent.py",
+      "lineno": 15,
+      "bases": [],
+      "methods": [
+        "run",
+        "_walk",
+        "_lang",
+        "_parse_python",
+        "_parse_js"
+      ],
+      "docstring": "",
+      "detail": null,
+      "layer": "other"
+    },
+    {
+      "id": "file::agents/tour_agent.py",
+      "label": "tour_agent.py",
+      "type": "file",
+      "language": "python",
+      "path": "agents/tour_agent.py",
+      "size": 7526,
+      "n_classes": 1,
+      "n_functions": 0,
+      "n_imports": 3,
+      "detail": null,
+      "layer": "other"
+    },
+    {
+      "id": "class::agents/tour_agent.py::TourAgent",
+      "label": "TourAgent",
+      "type": "class",
+      "file": "agents/tour_agent.py",
+      "lineno": 23,
+      "bases": [],
+      "methods": [
+        "run",
+        "_pick_itinerary",
+        "_generate_intro",
+        "_narrate_step",
+        "_generate_outro",
+        "_ollama_call"
+      ],
+      "docstring": "",
+      "detail": null,
+      "layer": "other"
+    },
+    {
+      "id": "file::agents/__init__.py",
+      "label": "__init__.py",
+      "type": "file",
+      "language": "python",
+      "path": "agents/__init__.py",
+      "size": 0,
+      "n_classes": 0,
+      "n_functions": 0,
+      "n_imports": 0,
+      "detail": null,
+      "layer": "other"
+    },
+    {
+      "id": "dep::fastapi",
+      "label": "fastapi",
+      "type": "dependency",
+      "external": true,
+      "detail": null,
+      "layer": "external"
+    },
+    {
+      "id": "dep::pydantic",
+      "label": "pydantic",
+      "type": "dependency",
+      "external": true,
+      "detail": null,
+      "layer": "external"
+    },
+    {
+      "id": "dep::typing",
+      "label": "typing",
+      "type": "dependency",
+      "external": true,
+      "detail": null,
+      "layer": "external"
+    },
+    {
+      "id": "dep::uuid",
+      "label": "uuid",
+      "type": "dependency",
+      "external": true,
+      "detail": null,
+      "layer": "external"
+    },
+    {
+      "id": "dep::asyncio",
+      "label": "asyncio",
+      "type": "dependency",
+      "external": true,
+      "detail": null,
+      "layer": "external"
+    },
+    {
+      "id": "dep::traceback",
+      "label": "traceback",
+      "type": "dependency",
+      "external": true,
+      "detail": null,
+      "layer": "external"
+    },
+    {
+      "id": "dep::httpx",
+      "label": "httpx",
+      "type": "dependency",
+      "external": true,
+      "detail": null,
+      "layer": "external"
+    },
+    {
+      "id": "dep::uvicorn",
+      "label": "uvicorn",
+      "type": "dependency",
+      "external": true,
+      "detail": null,
+      "layer": "external"
+    },
+    {
+      "id": "dep::json",
+      "label": "json",
+      "type": "dependency",
+      "external": true,
+      "detail": null,
+      "layer": "external"
+    },
+    {
+      "id": "dep::os",
+      "label": "os",
+      "type": "dependency",
+      "external": true,
+      "detail": null,
+      "layer": "external"
+    },
+    {
+      "id": "dep::pytest",
+      "label": "pytest",
+      "type": "dependency",
+      "external": true,
+      "detail": null,
+      "layer": "external"
+    },
+    {
+      "id": "dep::collections",
+      "label": "collections",
+      "type": "dependency",
+      "external": true,
+      "detail": null,
+      "layer": "external"
+    },
+    {
+      "id": "dep::hypothesis",
+      "label": "hypothesis",
+      "type": "dependency",
+      "external": true,
+      "detail": null,
+      "layer": "external"
+    },
+    {
+      "id": "dep::shutil",
+      "label": "shutil",
+      "type": "dependency",
+      "external": true,
+      "detail": null,
+      "layer": "external"
+    },
+    {
+      "id": "dep::pathlib",
+      "label": "pathlib",
+      "type": "dependency",
+      "external": true,
+      "detail": null,
+      "layer": "external"
+    },
+    {
+      "id": "dep::sys",
+      "label": "sys",
+      "type": "dependency",
+      "external": true,
+      "detail": null,
+      "layer": "external"
+    },
+    {
+      "id": "dep::unittest",
+      "label": "unittest",
+      "type": "dependency",
+      "external": true,
+      "detail": null,
+      "layer": "external"
+    },
+    {
+      "id": "dep::ast",
+      "label": "ast",
+      "type": "dependency",
+      "external": true,
+      "detail": null,
+      "layer": "external"
+    },
+    {
+      "id": "dep::stat",
+      "label": "stat",
+      "type": "dependency",
+      "external": true,
+      "detail": null,
+      "layer": "external"
+    },
+    {
+      "id": "dep::tempfile",
+      "label": "tempfile",
+      "type": "dependency",
+      "external": true,
+      "detail": null,
+      "layer": "external"
+    },
+    {
+      "id": "dep::urllib",
+      "label": "urllib",
+      "type": "dependency",
+      "external": true,
+      "detail": null,
+      "layer": "external"
+    },
+    {
+      "id": "dep::time",
+      "label": "time",
+      "type": "dependency",
+      "external": true,
+      "detail": null,
+      "layer": "external"
+    },
+    {
+      "id": "dep::re",
+      "label": "re",
+      "type": "dependency",
+      "external": true,
+      "detail": null,
+      "layer": "external"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file::main.py",
+      "target": "class::main.py::AnalyzeRequest",
+      "type": "contains"
+    },
+    {
+      "source": "file::main.py",
+      "target": "class::main.py::NodeDetailRequest",
+      "type": "contains"
+    },
+    {
+      "source": "file::main.py",
+      "target": "func::main.py::root",
+      "type": "contains"
+    },
+    {
+      "source": "file::main.py",
+      "target": "func::main.py::health",
+      "type": "contains"
+    },
+    {
+      "source": "file::main.py",
+      "target": "func::main.py::analyze",
+      "type": "contains"
+    },
+    {
+      "source": "file::main.py",
+      "target": "func::main.py::status",
+      "type": "contains"
+    },
+    {
+      "source": "file::main.py",
+      "target": "func::main.py::graph",
+      "type": "contains"
+    },
+    {
+      "source": "file::main.py",
+      "target": "func::main.py::node_detail",
+      "type": "contains"
+    },
+    {
+      "source": "file::main.py",
+      "target": "func::main.py::get_tour",
+      "type": "contains"
+    },
+    {
+      "source": "file::main.py",
+      "target": "func::main.py::_run_pipeline",
+      "type": "contains"
+    },
+    {
+      "source": "file::save_fixture.py",
+      "target": "func::save_fixture.py::main",
+      "type": "contains"
+    },
+    {
+      "source": "file::test_graph_properties.py",
+      "target": "func::test_graph_properties.py::sample_graph",
+      "type": "contains"
+    },
+    {
+      "source": "file::test_graph_properties.py",
+      "target": "func::test_graph_properties.py::node_ids",
+      "type": "contains"
+    },
+    {
+      "source": "file::test_graph_properties.py",
+      "target": "func::test_graph_properties.py::test_every_edge_references_existing_nodes",
+      "type": "contains"
+    },
+    {
+      "source": "file::test_graph_properties.py",
+      "target": "func::test_graph_properties.py::test_node_ids_are_unique",
+      "type": "contains"
+    },
+    {
+      "source": "file::test_graph_properties.py",
+      "target": "func::test_graph_properties.py::test_no_self_loops_on_dependency_edges",
+      "type": "contains"
+    },
+    {
+      "source": "file::test_graph_properties.py",
+      "target": "func::test_graph_properties.py::test_every_node_has_an_id_label_and_type",
+      "type": "contains"
+    },
+    {
+      "source": "file::test_graph_properties.py",
+      "target": "func::test_graph_properties.py::test_node_types_are_known_values",
+      "type": "contains"
+    },
+    {
+      "source": "file::test_graph_properties.py",
+      "target": "func::test_graph_properties.py::test_every_file_node_has_path",
+      "type": "contains"
+    },
+    {
+      "source": "file::test_graph_properties.py",
+      "target": "func::test_graph_properties.py::test_every_class_and_function_node_has_file_reference",
+      "type": "contains"
+    },
+    {
+      "source": "file::test_graph_properties.py",
+      "target": "func::test_graph_properties.py::test_layer_values_are_valid",
+      "type": "contains"
+    },
+    {
+      "source": "file::test_graph_properties.py",
+      "target": "func::test_graph_properties.py::test_stats_match_actual_node_counts",
+      "type": "contains"
+    },
+    {
+      "source": "file::test_graph_properties.py",
+      "target": "func::test_graph_properties.py::test_tour_steps_reference_existing_nodes",
+      "type": "contains"
+    },
+    {
+      "source": "file::test_graph_properties.py",
+      "target": "func::test_graph_properties.py::test_tour_steps_are_ordered_by_step_number",
+      "type": "contains"
+    },
+    {
+      "source": "file::test_graph_properties.py",
+      "target": "func::test_graph_properties.py::test_contains_edges_point_from_file_to_child",
+      "type": "contains"
+    },
+    {
+      "source": "file::test_graph_properties.py",
+      "target": "func::test_graph_properties.py::well_formed_graph",
+      "type": "contains"
+    },
+    {
+      "source": "file::test_graph_properties.py",
+      "target": "func::test_graph_properties.py::test_hypothesis_no_dangling_edges_in_generated_graphs",
+      "type": "contains"
+    },
+    {
+      "source": "file::test_graph_properties.py",
+      "target": "func::test_graph_properties.py::test_hypothesis_stats_always_consistent",
+      "type": "contains"
+    },
+    {
+      "source": "file::test_graph_properties.py",
+      "target": "func::test_graph_properties.py::test_pipeline_is_idempotent",
+      "type": "contains"
+    },
+    {
+      "source": "file::test_graph_properties.py",
+      "target": "func::test_graph_properties.py::test_adding_isolated_file_adds_exactly_one_node",
+      "type": "contains"
+    },
+    {
+      "source": "file::test_pipeline.py",
+      "target": "func::test_pipeline.py::main",
+      "type": "contains"
+    },
+    {
+      "source": "file::agents/dependency_agent.py",
+      "target": "class::agents/dependency_agent.py::DependencyAgent",
+      "type": "contains"
+    },
+    {
+      "source": "file::agents/documentation_agent.py",
+      "target": "class::agents/documentation_agent.py::DocumentationAgent",
+      "type": "contains"
+    },
+    {
+      "source": "file::agents/flowchart_agent.py",
+      "target": "class::agents/flowchart_agent.py::FlowchartAgent",
+      "type": "contains"
+    },
+    {
+      "source": "file::agents/ingestion_agent.py",
+      "target": "class::agents/ingestion_agent.py::IngestionAgent",
+      "type": "contains"
+    },
+    {
+      "source": "file::agents/ingestion_agent.py",
+      "target": "func::agents/ingestion_agent.py::_force_remove_readonly",
+      "type": "contains"
+    },
+    {
+      "source": "file::agents/ingestion_agent.py",
+      "target": "func::agents/ingestion_agent.py::_safe_rmtree",
+      "type": "contains"
+    },
+    {
+      "source": "file::agents/layer_agent.py",
+      "target": "class::agents/layer_agent.py::LayerAgent",
+      "type": "contains"
+    },
+    {
+      "source": "file::agents/parser_agent.py",
+      "target": "class::agents/parser_agent.py::ParserAgent",
+      "type": "contains"
+    },
+    {
+      "source": "file::agents/tour_agent.py",
+      "target": "class::agents/tour_agent.py::TourAgent",
+      "type": "contains"
+    },
+    {
+      "source": "file::main.py",
+      "target": "dep::fastapi",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::main.py",
+      "target": "dep::fastapi",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::main.py",
+      "target": "dep::fastapi",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::main.py",
+      "target": "dep::pydantic",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::main.py",
+      "target": "dep::typing",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::main.py",
+      "target": "dep::typing",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::main.py",
+      "target": "dep::uuid",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::main.py",
+      "target": "dep::asyncio",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::main.py",
+      "target": "dep::traceback",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::main.py",
+      "target": "file::agents/ingestion_agent.py",
+      "type": "imports"
+    },
+    {
+      "source": "file::main.py",
+      "target": "file::agents/parser_agent.py",
+      "type": "imports"
+    },
+    {
+      "source": "file::main.py",
+      "target": "file::agents/dependency_agent.py",
+      "type": "imports"
+    },
+    {
+      "source": "file::main.py",
+      "target": "file::agents/layer_agent.py",
+      "type": "imports"
+    },
+    {
+      "source": "file::main.py",
+      "target": "file::agents/documentation_agent.py",
+      "type": "imports"
+    },
+    {
+      "source": "file::main.py",
+      "target": "file::agents/flowchart_agent.py",
+      "type": "imports"
+    },
+    {
+      "source": "file::main.py",
+      "target": "file::agents/tour_agent.py",
+      "type": "imports"
+    },
+    {
+      "source": "file::main.py",
+      "target": "dep::httpx",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::main.py",
+      "target": "dep::uvicorn",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::save_fixture.py",
+      "target": "dep::asyncio",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::save_fixture.py",
+      "target": "dep::json",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::save_fixture.py",
+      "target": "file::agents/parser_agent.py",
+      "type": "imports"
+    },
+    {
+      "source": "file::save_fixture.py",
+      "target": "file::agents/dependency_agent.py",
+      "type": "imports"
+    },
+    {
+      "source": "file::save_fixture.py",
+      "target": "file::agents/layer_agent.py",
+      "type": "imports"
+    },
+    {
+      "source": "file::save_fixture.py",
+      "target": "dep::os",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::test_graph_properties.py",
+      "target": "dep::pytest",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::test_graph_properties.py",
+      "target": "dep::collections",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::test_graph_properties.py",
+      "target": "dep::hypothesis",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::test_graph_properties.py",
+      "target": "dep::hypothesis",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::test_graph_properties.py",
+      "target": "dep::hypothesis",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::test_graph_properties.py",
+      "target": "dep::json",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::test_graph_properties.py",
+      "target": "dep::asyncio",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::test_graph_properties.py",
+      "target": "dep::json",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::test_graph_properties.py",
+      "target": "file::agents/parser_agent.py",
+      "type": "imports"
+    },
+    {
+      "source": "file::test_graph_properties.py",
+      "target": "file::agents/dependency_agent.py",
+      "type": "imports"
+    },
+    {
+      "source": "file::test_graph_properties.py",
+      "target": "file::agents/layer_agent.py",
+      "type": "imports"
+    },
+    {
+      "source": "file::test_graph_properties.py",
+      "target": "dep::asyncio",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::test_graph_properties.py",
+      "target": "dep::shutil",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::test_graph_properties.py",
+      "target": "dep::pathlib",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::test_graph_properties.py",
+      "target": "file::agents/parser_agent.py",
+      "type": "imports"
+    },
+    {
+      "source": "file::test_graph_properties.py",
+      "target": "file::agents/dependency_agent.py",
+      "type": "imports"
+    },
+    {
+      "source": "file::test_graph_properties.py",
+      "target": "file::agents/layer_agent.py",
+      "type": "imports"
+    },
+    {
+      "source": "file::test_pipeline.py",
+      "target": "dep::asyncio",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::test_pipeline.py",
+      "target": "dep::sys",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::test_pipeline.py",
+      "target": "dep::os",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::test_pipeline.py",
+      "target": "dep::unittest",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::test_pipeline.py",
+      "target": "dep::unittest",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::test_pipeline.py",
+      "target": "file::agents/ingestion_agent.py",
+      "type": "imports"
+    },
+    {
+      "source": "file::test_pipeline.py",
+      "target": "file::agents/parser_agent.py",
+      "type": "imports"
+    },
+    {
+      "source": "file::test_pipeline.py",
+      "target": "file::agents/dependency_agent.py",
+      "type": "imports"
+    },
+    {
+      "source": "file::test_pipeline.py",
+      "target": "file::agents/layer_agent.py",
+      "type": "imports"
+    },
+    {
+      "source": "file::test_pipeline.py",
+      "target": "file::agents/documentation_agent.py",
+      "type": "imports"
+    },
+    {
+      "source": "file::test_pipeline.py",
+      "target": "file::agents/flowchart_agent.py",
+      "type": "imports"
+    },
+    {
+      "source": "file::test_pipeline.py",
+      "target": "file::agents/tour_agent.py",
+      "type": "imports"
+    },
+    {
+      "source": "file::agents/dependency_agent.py",
+      "target": "dep::os",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::agents/dependency_agent.py",
+      "target": "dep::collections",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::agents/documentation_agent.py",
+      "target": "dep::httpx",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::agents/documentation_agent.py",
+      "target": "dep::asyncio",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::agents/documentation_agent.py",
+      "target": "dep::os",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::agents/flowchart_agent.py",
+      "target": "dep::ast",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::agents/flowchart_agent.py",
+      "target": "dep::os",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::agents/flowchart_agent.py",
+      "target": "dep::httpx",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::agents/flowchart_agent.py",
+      "target": "dep::asyncio",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::agents/ingestion_agent.py",
+      "target": "dep::os",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::agents/ingestion_agent.py",
+      "target": "dep::stat",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::agents/ingestion_agent.py",
+      "target": "dep::shutil",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::agents/ingestion_agent.py",
+      "target": "dep::tempfile",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::agents/ingestion_agent.py",
+      "target": "dep::asyncio",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::agents/ingestion_agent.py",
+      "target": "dep::urllib",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::agents/ingestion_agent.py",
+      "target": "dep::time",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::agents/layer_agent.py",
+      "target": "dep::os",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::agents/layer_agent.py",
+      "target": "dep::re",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::agents/parser_agent.py",
+      "target": "dep::ast",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::agents/parser_agent.py",
+      "target": "dep::os",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::agents/parser_agent.py",
+      "target": "dep::re",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::agents/tour_agent.py",
+      "target": "dep::os",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::agents/tour_agent.py",
+      "target": "dep::httpx",
+      "type": "depends_on"
+    },
+    {
+      "source": "file::agents/tour_agent.py",
+      "target": "dep::asyncio",
+      "type": "depends_on"
+    }
+  ],
+  "stats": {
+    "n_files": 12,
+    "n_classes": 9,
+    "n_functions": 31,
+    "n_deps": 23,
+    "n_edges": 117,
+    "layers": {
+      "entry": 11,
+      "other": 19,
+      "test": 22,
+      "external": 23
+    }
+  }
+}
