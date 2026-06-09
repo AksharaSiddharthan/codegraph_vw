@@ -14,7 +14,7 @@ not just impress with complexity.
   layer (entry / api / business / data / ui / util / config / test).
 - **Flowchart view** — horizontal swimlane layout showing how data flows
   through architectural layers, with entry points highlighted.
-- **🧭 Guided Tour** — auto-generated walkthrough that visits ~8 key files in
+- **Guided Tour** — auto-generated walkthrough that visits ~8 key files in
   dependency order. Each stop has an LLM-narrated explanation. Tour controls
   highlight the current node on the graph as you advance.
 - **Click any node → AI explanation** — Qwen2.5-Coder generates a plain-English
@@ -58,7 +58,7 @@ Seven agents run in sequence:
 
 - Python 3.10+
 - Node.js 18+
-- Git (for cloning GitHub repos)
+- Git 
 - [Ollama](https://ollama.com/) running locally
 
 ## Setup
